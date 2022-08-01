@@ -31,11 +31,11 @@ endtime = starttime + 4*3600
 print(endtime)
 
 net = 'AK'
-sta = 'HOM'
+sta = 'O17K'
 loc = 'EP'
 chan = 'BDF'
 
-SPEC_WIN = 20 # spectrogram window length
+SPEC_WIN = 50 # spectrogram window length
 
 SAVE = False #save figure or not
 
@@ -100,6 +100,7 @@ ax1.set_title(st_rem[0].id)
 ax2 = plt.subplot(312)
 ax2.plot(tvec, st_filt[0].data, 'k-')
 ax2.set_xlim(tvec[0], tvec[-1])
+#ax2.set_ylim(-20, 20)
 ax2.xaxis_date()
 
 #Spectogram
